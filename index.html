@@ -1,118 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hilmal Bintang Al Azis — Blockchain Portfolio</title>
-  <meta name="description" content="Blockchain Enthusiast | Node Operator | Retrodrop Hunter">
-  <style>
-    :root{
-      --bg:#0b0f14; --card:#121821; --text:#e9eef5; --muted:#a8b3c7; --accent:#43d19e;
-      --ring: rgba(67,209,158,.35);
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;
-      background: radial-gradient(1200px 800px at 80% -10%, #1b2330 0%, #0b0f14 60%),
-                  radial-gradient(1000px 800px at -10% 120%, #15202b 0%, #0b0f14 60%);
-      color:var(--text);
-    }
-    .wrap{max-width:940px;margin:40px auto;padding:24px}
-    .card{
-      background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.00));
-      border:1px solid rgba(255,255,255,.08);
-      border-radius:16px; padding:28px; box-shadow:0 20px 60px rgba(0,0,0,.35);
-      backdrop-filter: blur(6px);
-    }
-    header{display:flex; gap:22px; align-items:center; flex-wrap:wrap}
-    .avatar{
-      width:120px;height:120px;border-radius:50%;object-fit:cover;
-      border:3px solid var(--accent); box-shadow:0 0 0 8px var(--ring);
-    }
-    h1{margin:0;font-size:28px}
-    .tagline{color:var(--accent);font-weight:600;margin-top:6px}
-    .muted{color:var(--muted)}
-    section{margin-top:26px}
-    h2{font-size:20px;margin:0 0 8px 0}
-    ul{margin:8px 0 0 18px}
-    li{margin:6px 0}
-    .grid{display:grid;grid-template-columns:1fr;gap:16px}
-    @media(min-width:820px){.grid{grid-template-columns:1fr 1fr}}
-    .pill{
-      display:inline-block;padding:10px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.12);
-      text-decoration:none;color:var(--text);font-weight:600;margin-right:10px
-    }
-    .pill:hover{border-color:var(--accent)}
-    .footer{margin-top:26px;color:var(--muted);font-size:14px}
-    code{background:#0e1420;border:1px solid rgba(255,255,255,.06);padding:2px 6px;border-radius:6px}
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Hilmal | Digital Resume</title>
+<meta name="description" content="Blockchain Enthusiast | Node Operator | Retrodrop Hunter" />
+<style>
+  :root{
+    --bg:#0f172a;        /* slate-900 */
+    --panel:#111827;     /* gray-900 */
+    --panel2:#0b1222;    /* deep panel */
+    --text:#e5e7eb;      /* gray-200 */
+    --muted:#9ca3af;     /* gray-400 */
+    --brand:#22d3ee;     /* cyan-400 */
+    --brand-2:#60a5fa;   /* blue-400 */
+    --accent:#34d399;    /* emerald-400 */
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+    color:var(--text);
+    background:
+      radial-gradient(1200px 700px at 85% -10%, #10233d 0%, var(--bg) 60%),
+      radial-gradient(1000px 700px at -10% 120%, #0d1b31 0%, var(--bg) 60%),
+      var(--bg);
+  }
+  .wrap{max-width:960px;margin:32px auto;padding:20px}
+  .hero{
+    background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,0));
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:20px; padding:28px;
+    box-shadow:0 24px 80px rgba(0,0,0,.45);
+  }
+  .top{
+    display:flex; gap:20px; align-items:center; flex-wrap:wrap;
+  }
+  .avatar{
+    width:140px;height:140px;border-radius:18px;object-fit:cover;
+    border:3px solid rgba(96,165,250,.5); /* blue ring */
+    box-shadow: 0 0 0 6px rgba(34,211,238,.20); /* cyan glow */
+    background:#0b1222;
+  }
+  h1{font-size:34px;line-height:1.1;margin:0}
+  .tagline{
+    font-weight:700;
+    background: linear-gradient(90deg,var(--brand),var(--accent),var(--brand-2));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    margin-top:6px
+  }
+  .sub{color:var(--muted);margin-top:4px}
+  .social{display:flex;gap:14px;margin-top:12px}
+  .chip{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:10px 14px;border-radius:12px;
+    background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));
+    border:1px solid rgba(255,255,255,.08);
+    text-decoration:none;color:var(--text);font-weight:600
+  }
+  .chip:hover{border-color:var(--brand)}
+  .flag{font-size:18px}
+  .section{margin-top:24px;background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,0));
+           border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:18px}
+  h2{margin:0 0 10px 0;font-size:20px}
+  p{margin:0}
+  ul{margin:8px 0 0 18px}
+  li{margin:6px 0}
+  .grid{display:grid;gap:16px}
+  @media(min-width:860px){.grid{grid-template-columns:1fr 1fr}}
+  .footer{margin-top:24px;color:var(--muted);font-size:14px;text-align:center}
+  code{background:#0b1222;border:1px solid rgba(255,255,255,.06);padding:2px 6px;border-radius:6px}
+</style>
 </head>
 <body>
   <div class="wrap">
-    <div class="card">
-      <header>
-        <!-- Foto profil -->
-        <img src="me.jpg?v=5" alt="Profile photo" class="avatar">
+    <article class="hero">
+      <div class="top">
+        <!-- pakai foto me.jpg di repo kamu -->
+        <img src="me.jpg?v=7" alt="" class="avatar">
         <div>
-          <h1>Hilmal Bintang Al Azis</h1>
-          <div class="tagline">Blockchain Enthusiast · Node Operator · Retrodrop Hunter</div>
-          <div class="muted">Since 2022 — focused on infra, validator security, and hands-on testnets.</div>
-          <div style="margin-top:12px">
-            <!-- Link akun -->
-            <a class="pill" href="https://github.com/hilmal23" target="_blank" rel="noopener">GitHub</a>
-            <a class="pill" href="mailto:you@example.com">Email</a>
-            <a class="pill" href="https://t.me/hilmal11" target="_blank" rel="noopener">Telegram</a>
+          <h1>Hilmal</h1>
+          <div class="tagline">Blockchain Enthusiast | Node Operator | Retrodrop Hunter</div>
+          <div class="sub"><span class="flag">🇮🇩</span> Indonesia · Available for collaborations</div>
+          <div class="social">
+            <a class="chip" href="mailto:you@example.com">Email</a>
+            <a class="chip" href="https://github.com/hilmal23" target="_blank" rel="noopener">GitHub</a>
+            <a class="chip" href="https://t.me/hilmal11" target="_blank" rel="noopener">Telegram</a>
+            <!-- <a class="chip" href="#" target="_blank" rel="noopener">Twitter</a> -->
           </div>
         </div>
-      </header>
+      </div>
 
-      <section>
-        <h2>About Me</h2>
-        <p>
-          I am a blockchain enthusiast who started in 2022, with experience managing validator nodes,
-          actively participating in multiple testnets, and engaging in retrodrop/airdrop programs.
-          I focus on blockchain infrastructure, node security, and supporting new projects through testnets.
-        </p>
-      </section>
+      <div class="section" style="margin-top:20px">
+        <h2>Summary</h2>
+        <p>Passionate blockchain enthusiast (since 2022) with hands-on experience in validator node operations, active testnet participation, and retrodrop/airdrop programs. Focused on infra, node security, and helping new projects through testnets.</p>
+      </div>
 
-      <section class="grid">
-        <div>
+      <div class="grid">
+        <div class="section">
           <h2>Skills</h2>
           <ul>
-            <li><b>Blockchain:</b> Node setup (Cosmos SDK, EVM, Layer 2), staking, multiple-account validator management</li>
-            <li><b>Testnet:</b> Node deployment, troubleshooting, network monitoring</li>
-            <li><b>Retrodrop:</b> Hunting & documenting activities (DeFi, NFT, Bridge, Wallet, etc.)</li>
-            <li><b>Tools & DevOps:</b> Linux (Ubuntu), Docker, Git, VPS Management</li>
+            <li><b>Blockchain:</b> Node setup (Cosmos SDK, EVM, L2), staking, multi-account validator management</li>
+            <li><b>Testnet:</b> Deploy nodes, troubleshooting, network monitoring</li>
+            <li><b>Retrodrop:</b> DeFi/NFT/Bridge/Wallet activity & documentation</li>
+            <li><b>Tools & DevOps:</b> Ubuntu, Docker, Git, VPS Management</li>
           </ul>
         </div>
-        <div>
+        <div class="section">
           <h2>Education & Certifications</h2>
           <ul>
             <li>Cuvang Venture Developer Bootcamp (Online, 2024)</li>
           </ul>
         </div>
-      </section>
+      </div>
 
-      <section>
-        <h2>Experience / Projects</h2>
+      <div class="section">
+        <h2>Experience</h2>
         <ul>
-          <li><b>Cysic</b> (2024–2025) — ASIC miner project (ZkEVM). Managed GPU-based miner node, environment config, sync monitoring, and staking tests.</li>
-          <li><b>Linea Testnet</b> (2023–2025) — Bridging, DeFi transactions, and ecosystem app testing.</li>
-          <li><b>Initia Testnet</b> (2024–2025) — Deployed simple contracts and joined retroactive campaign quests.</li>
-          <li><b>Puffer Finance</b> (2024) — Restaking in Ethereum ecosystem; staking for yield.</li>
-          <li><b>Cosmos Ecosystem</b> (2023–2025) — Installed, updated, and maintained uptime for multiple Cosmos SDK validators.</li>
+          <li><b>Cysic</b> (2024–2025) — ZkEVM ASIC/GPU miner node; env config, sync monitoring, staking tests.</li>
+          <li><b>Linea Testnet</b> (2023–2025) — Bridging, DeFi transactions, and app testing.</li>
+          <li><b>Initia Testnet</b> (2024–2025) — Simple contract deploys; retroactive quests.</li>
+          <li><b>Puffer Finance</b> (2024) — Restaking on Ethereum; staking for yield.</li>
+          <li><b>Cosmos Ecosystem</b> (2023–2025) — Install/update; uptime for several Cosmos SDK validators.</li>
         </ul>
-      </section>
+      </div>
 
-      <section>
+      <div class="section">
         <h2>Tech Stack</h2>
         <p><code>Ubuntu</code> · <code>Docker</code> · <code>Git</code> · <code>Cosmos SDK</code> · <code>EVM</code> · <code>Layer 2</code></p>
-      </section>
-
-      <div class="footer">
-        © <span id="y"></span> Hilmal Bintang Al Azis — Built with GitHub Pages
       </div>
-    </div>
+
+      <div class="footer">© <span id="y"></span> Hilmal — Built with GitHub Pages</div>
+    </article>
   </div>
   <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
 </body>
